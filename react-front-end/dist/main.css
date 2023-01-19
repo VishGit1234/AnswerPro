@@ -1,1 +1,8 @@
-.helloWorld{color:#af00ff}
+/*!********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/main.scss ***!
+  \********************************************************************************************************/
+.helloWorld {
+  color: rgb(175, 0, 255);
+}
+
+/*# sourceMappingURL=main.css.map*/
