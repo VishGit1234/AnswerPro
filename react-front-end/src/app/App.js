@@ -1,9 +1,12 @@
 import React from 'react';
+import NavBar from './navbar.js';
+import QuestionBox from './PostQuestion.js';
 
 const App = () => {
     return(
-        <div>
-            <h1 className='text-center font-sans text-emerald-50'>HelloWorld!</h1>
+        <div className='bg-slate-600 h-screen w-screen flex flex-col overflow-hidden'>
+            <NavBar/>
+            <QuestionBox/>
         </div>
     );
 };
