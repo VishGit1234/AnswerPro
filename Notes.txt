@@ -1,0 +1,6 @@
+
+npm run build - gives this error:
+npm ERR! path C:\Users\geope\BeegProje\AnswerPro/package.json
+
+correct file path would be C:\Users\geope\BeegProje\AnswerPro\react-front-end\package.json
+how do we change it?
