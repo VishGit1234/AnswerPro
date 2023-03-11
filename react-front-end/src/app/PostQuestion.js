@@ -1,16 +1,30 @@
 import React, {useRef, useState} from 'react';
 import useWindowDimensions from './windowDimensions';
+import axios from 'axios';
+import filereader from 'filereader';
 
 const QuestionBox = () => {
     const ref = useRef(null);
     const [selectedFile, setSelectedFile] = useState(null);
     const {width, height} = useWindowDimensions();
 
-    const handleClick = (e) => {
+    const handleClick = async (e) => {
         //Prevent refresh
-        e.preventDefault()
-        // 👇️ access textarea value
-        console.log(ref.current.value);
+        e.preventDefault();
+        
+        //Check if file exists
+        if(selectedFile)
+        {
+            let reader = new FileReader();
+            reader.readAsDataURL()
+        }
+        
+        try {
+            await axios.post("http://localhost:3000/api/question/post", {username : "Unknown", question : String(e.textarea)});
+            console.log("Successful POST Request");
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     const handleFileInput = (e) => {
